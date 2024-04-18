@@ -19,7 +19,7 @@ export default function Document() {
           }}
         />
       </Head>
-      <body className="flex min-h-screen bg-slate-200 dark:bg-gray-950">
+      <body>
         <Main />
         <NextScript />
         <script> </script>

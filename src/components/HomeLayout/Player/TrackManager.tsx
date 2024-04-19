@@ -10,22 +10,22 @@ const TrackController = () => {
 
     return (
         <div>
-            <button className="rounded-full p-2 bg-gray-200 hover:bg-gray-300">
-                <IconArrowsShuffle2 className="h-6 w-6" />
+            <button className="rounded-full p-2  text-light-primary dark:text-dark-primary ">
+                <IconArrowsShuffle2 stroke={1.5} className="h-6 w-6" />
             </button>
-            <button className="rounded-full p-2 bg-gray-200 hover:bg-gray-300">
-                <IconPlayerSkipBack className="h-6 w-6" />
+            <button className="rounded-full p-2  text-light-primary dark:text-dark-primary ">
+                <IconPlayerSkipBack stroke={1.5} className="h-6 w-6" />
             </button>
             <button onClick={() => setTrack((prev) => {
                 return !prev
-            })} className="rounded-full p-2 bg-gray-200 hover:bg-gray-300">
-                {track ? <IconPlayerPause /> : <IconPlayerPlay />}
+            })} className="rounded-full p-2  text-light-primary dark:text-dark-primary ">
+                {track ? <IconPlayerPause stroke={1.5} /> : <IconPlayerPlay stroke={1.5} />}
             </button>
-            <button className="rounded-full p-2 bg-gray-200 hover:bg-gray-300">
-                <IconPlayerSkipForward className="h-6 w-6" />
+            <button className="rounded-full p-2  text-light-primary dark:text-dark-primary ">
+                <IconPlayerSkipForward stroke={1.5} className="h-6 w-6" />
             </button>
-            <button className="rounded-full p-2 bg-gray-200 hover:bg-gray-300">
-                <IconRepeat className="h-6 w-6" />
+            <button className="rounded-full p-2  text-light-primary dark:text-dark-primary ">
+                <IconRepeat stroke={1.5} className="h-6 w-6" />
             </button>
         </div>
     )
@@ -40,7 +40,7 @@ const TrackManager: React.FC<TrackManagerProps> = ({ className }) => {
     return (
         <div className={`${className} flex justify-center flex-col items-center space-x-4`}>
             <TrackController />
-            <TrackSlider value={sliderValue} onChange={handleSliderChange} />
+            <TrackSlider className='py-2' value={sliderValue} onChange={handleSliderChange} />
         </div>
     );
 };

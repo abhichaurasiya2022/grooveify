@@ -4,32 +4,7 @@ import { IconArrowsShuffle2, IconDevices, IconMicrophone, IconMusicPause, IconPl
 
 interface MediaControllerProps extends React.HTMLAttributes<HTMLDivElement> { }
 
-const TrackController = () => {
 
-    const [track, setTrack] = useState(false);
-
-    return (
-        <div>
-            <button className="rounded-full p-2 bg-gray-200 hover:bg-gray-300">
-                <IconArrowsShuffle2 className="h-6 w-6" />
-            </button>
-            <button className="rounded-full p-2 bg-gray-200 hover:bg-gray-300">
-                <IconPlayerSkipBack className="h-6 w-6" />
-            </button>
-            <button onClick={() => setTrack((prev) => {
-                return !prev
-            })} className="rounded-full p-2 bg-gray-200 hover:bg-gray-300">
-                {track ? <IconPlayerPause /> : <IconPlayerPlay />}
-            </button>
-            <button className="rounded-full p-2 bg-gray-200 hover:bg-gray-300">
-                <IconPlayerSkipForward className="h-6 w-6" />
-            </button>
-            <button className="rounded-full p-2 bg-gray-200 hover:bg-gray-300">
-                <IconRepeat className="h-6 w-6" />
-            </button>
-        </div>
-    )
-}
 
 const MediaController: React.FC<MediaControllerProps> = ({ className }) => {
     const [sliderValue, setSliderValue] = useState<number>(50);
@@ -40,12 +15,12 @@ const MediaController: React.FC<MediaControllerProps> = ({ className }) => {
     return (
         <div className={`${className} flex justify-center flex-row items-center px-5 space-x-2`}>
             <div className='flex  flex-row content-center items-center'>
-                <IconVolume />
+                <IconVolume className=' text-light-primary dark:text-dark-primary ' stroke={1.5} />
                 <TrackSlider value={sliderValue} onChange={handleSliderChange} />
             </div>
-            <IconMicrophone />
-            <IconDevices />
-            <IconShare />
+            <IconMicrophone className=' text-light-primary dark:text-dark-primary ' stroke={1.5} />
+            <IconDevices className=' text-light-primary dark:text-dark-primary ' stroke={1.5} />
+            <IconShare className=' text-light-primary dark:text-dark-primary ' stroke={1.5} />
         </div>
     );
 };

@@ -17,10 +17,10 @@ export const IconButton: React.FC<IconButtonProps> = ({ leftIcon, rightIcon, lab
     return (
         <button
             {...props}
-            className={` ${className}  hover:text-blue-700  w-full flex justify-left font-semibold items-center p-1 border border-transparent rounded-md text-sm dark:text-white`}
+            className={` ${className} text-light-primary dark:text-dark-primary hover:text-light-accent dark:hover:text-dark-accent w-full flex justify-left font-semibold items-center p-1 border border-transparent rounded-md text-sm`}
         >
             {leftIcon && <span className="mr-2">{leftIcon}</span>}
-            <span className="">{label}</span>
+            <span >{label}</span>
             {rightIcon && <span className="ml-2">{rightIcon}</span>}
         </button>
     );
@@ -34,10 +34,7 @@ export const FullWidthButton: React.FC<IconButtonProps> = ({ label, className, .
             {...props}
             className={` ${className} 
              w-full p-3  flex justify-center font-semibold items-center  border border-transparent rounded-md text-sm 
-             text-gray-100
-             bg-gray-700 
-             dark:text-gray-700 
-             dark:bg-gray-100 `}
+            text-dark-primary dark:text-dark-primary bg-dark-bgMain dark:bg-dark-bgMain`}
         >
             {label}
         </button>

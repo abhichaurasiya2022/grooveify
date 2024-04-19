@@ -9,12 +9,12 @@ interface FeedRowProps {
 const FeedRow: React.FC<FeedRowProps> = ({ title, data }) => {
     return (
         <div className="py-4">
-            <div className='flex flex-row justify-between text-center'>
+            <div className='flex flex-row justify-between text-light-primary dark:text-dark-primary text-center'>
 
-                <h1 className="text-sm font-bold tracking-tight text-gray-900 sm:text-xl">
+                <h1 className="text-sm font-bold tracking-tight  sm:text-xl">
                     {title}
                 </h1>
-                <div className='text-gray-700 text-sm content-center cursor-pointer'>See All</div>
+                <div className='text-light-sectext-dark-secondary dark:text-dark-secondary text-sm content-center cursor-pointer'>See All</div>
 
             </div>
 

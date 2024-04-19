@@ -7,7 +7,7 @@ interface LibraryProps { }
 const Library: React.FC<LibraryProps> = () => {
     return (
         <div className="flex flex-col py-3">
-            <div className="mx-1 font-light text-xs text-gray-950">LIBRARY</div>
+            <div className="mx-1 font-light text-xs text-light-primary dark:text-dark-primary">LIBRARY</div>
             <div className="flex flex-col flex-1">
                 <IconButton leftIcon={<IconDownload />} label="Download" />
                 <IconButton leftIcon={<IconHeart />} label="Favorites" />

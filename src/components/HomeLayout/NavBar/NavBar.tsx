@@ -5,16 +5,35 @@ import ActionHeader from './ActionHeader';
 import Features from './Features';
 import Library from './Library';
 
-interface NavbarProps extends React.HTMLProps<HTMLDivElement> { }
+interface NavbarProps extends React.HTMLProps<HTMLDivElement> {
+    setIsSideBarOpen: React.Dispatch<React.SetStateAction<boolean>>;
+    isSideBarOpen: boolean,
+}
+export interface OpenPage {
+    Home: 'home',
+    Discover: 'discover',
+    Collection: 'collection',
+    Download: 'download',
+    Favorites: 'favorites',
+    Local: 'local',
 
-const Navbar: React.FC<NavbarProps> = ({ className, ...props }) => {
+
+}
+const Navbar: React.FC<NavbarProps> = ({ className, setIsSideBarOpen, isSideBarOpen, ...props }) => {
+
     return (
         <nav className={`  overscroll-none overflow-scroll  ${className} p-3`}  {...props}>
-            <ActionHeader onLeftIconClick={() => { }} leftIcon={<IconVinyl />} rightIcon={<IconLayoutSidebarRightExpand />} onButtonClick={function (): void {
-                throw new Error('Function not implemented.');
-            }} />
-            <Features />
-            <Library />
+            <ActionHeader onLeftIconClick={() => { }} leftIcon={isSideBarOpen ? <IconVinyl className=' text-light-primary dark:text-dark-primary ' stroke={3} /> : undefined} rightIcon={<IconLayoutSidebarRightExpand className=' text-light-primary dark:text-dark-primary ' stroke={1.5} />} onButtonClick={() => setIsSideBarOpen((prev) => {
+                return !prev;
+            })} />
+            {
+                isSideBarOpen && (
+                    <>
+                        <Features />
+                        <Library />
+                    </>
+                )
+            }
 
         </nav>
     );

@@ -9,13 +9,13 @@ interface NavbarProps extends React.HTMLProps<HTMLDivElement> { }
 
 const Navbar: React.FC<NavbarProps> = ({ className, ...props }) => {
     return (
-        <nav className={` ${className} p-3`}  {...props}>
+        <nav className={`  overscroll-none overflow-scroll  ${className} p-3`}  {...props}>
             <ActionHeader onLeftIconClick={() => { }} leftIcon={<IconVinyl />} rightIcon={<IconLayoutSidebarRightExpand />} onButtonClick={function (): void {
                 throw new Error('Function not implemented.');
             }} />
             <Features />
             <Library />
-            {/* <IconButton leftIcon={<IconVinyl />} label={'Abhi'} /> */}
+
         </nav>
     );
 }

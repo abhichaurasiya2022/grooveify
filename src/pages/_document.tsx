@@ -19,7 +19,7 @@ export default function Document() {
           }}
         />
       </Head>
-      <body>
+      <body className="w-dvw h-dvh max-h-dvh  bg-slate-200 dark:bg-gray-950">
         <Main />
         <NextScript />
         <script> </script>

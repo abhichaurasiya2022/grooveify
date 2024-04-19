@@ -9,14 +9,17 @@ import Player from "./Player/Player"
 
 const HomeLayout = () => {
     return (
-        <div className="flex flex-col w-screen h-screen">
-            <div className="flex w-full flex-row flex-1" >
-                <Navbar className="border-4 border-cyan-900 basis-1/6" />
-                <MainFeed className="border-4 border-cyan-900 basis-3/5" />
-                <ActivitySection className="border-4 border-cyan-900 basis-1/4" />
+        <>
+            <Player />
+            <div className="flex flex-col w-dvw h-dvh">
+                <div className="flex w-dvw h-dvh flex-row flex-grow">
+
+                    <Navbar className="pb-20 basis-1/6" />
+                    <MainFeed className="pb-20 basis-3/5" />
+                    <ActivitySection className="pt-4 pb-20 basis-1/4" />
+                </div>
             </div>
-            <Player className="flex border-4 border-cyan-900  bottom-0 left-0 w-full" />
-        </div>
+        </>
     )
 }
 

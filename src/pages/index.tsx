@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="flex w-full h-dvh bg-slate-200 dark:bg-gray-950">
+    <main>
       <HomeLayout />
     </main>
   );

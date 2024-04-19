@@ -6,6 +6,11 @@ interface IconButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> 
     label: string;
 }
 
+interface FullWidthButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+
+    label: string;
+}
+
 export const IconButton: React.FC<IconButtonProps> = ({ leftIcon, rightIcon, label, className, ...props }) => {
 
 
@@ -21,3 +26,20 @@ export const IconButton: React.FC<IconButtonProps> = ({ leftIcon, rightIcon, lab
     );
 }
 
+export const FullWidthButton: React.FC<IconButtonProps> = ({ label, className, ...props }) => {
+
+
+    return (
+        <button
+            {...props}
+            className={` ${className} 
+             w-full p-3  flex justify-center font-semibold items-center  border border-transparent rounded-md text-sm 
+             text-gray-100
+             bg-gray-700 
+             dark:text-gray-700 
+             dark:bg-gray-100 `}
+        >
+            {label}
+        </button>
+    );
+}

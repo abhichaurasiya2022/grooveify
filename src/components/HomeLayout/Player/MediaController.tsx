@@ -15,12 +15,12 @@ const MediaController: React.FC<MediaControllerProps> = ({ className }) => {
     return (
         <div className={`${className} flex justify-center flex-row items-center px-5 space-x-2`}>
             <div className='flex  flex-row content-center items-center'>
-                <IconVolume className=' text-light-primary dark:text-dark-primary ' stroke={1.5} />
+                <IconVolume className=' text-light-primary dark:text-dark-primary ' stroke={1.25} />
                 <TrackSlider value={sliderValue} onChange={handleSliderChange} />
             </div>
-            <IconMicrophone className=' text-light-primary dark:text-dark-primary ' stroke={1.5} />
-            <IconDevices className=' text-light-primary dark:text-dark-primary ' stroke={1.5} />
-            <IconShare className=' text-light-primary dark:text-dark-primary ' stroke={1.5} />
+            <IconMicrophone className=' text-light-primary dark:text-dark-primary ' stroke={1.25} />
+            <IconDevices className=' text-light-primary dark:text-dark-primary ' stroke={1.25} />
+            <IconShare className=' text-light-primary dark:text-dark-primary ' stroke={1.25} />
         </div>
     );
 };

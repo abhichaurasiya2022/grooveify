@@ -9,9 +9,10 @@ interface TrackDetailProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const TrackDetail: React.FC<TrackDetailProps> = ({ className, TrackName, TrackArtist, ActionIcon1, ActionIcon2 }) => {
     return (
-        <div className={`${className} content-center space-x-3 p-2 flex justify-between`}>
-            <div className="flex text-clip flex-grow self-center text-xs text-nowrap flex-col">
-                <div className='font-bold text-light-primary dark:text-dark-primary'>{TrackName}</div>
+        <div className={`${className} content-center space-x-3 p-2 flex justify-left`}>
+
+            <div className="flex text-clip  self-center text-xs text-nowrap flex-col">
+                <div className='font-semibold text-light-primary dark:text-dark-primary'>{TrackName}</div>
                 <div className='text-clip text-light-secondary dark:text-dark-secondary'>{TrackArtist}</div>
             </div>
             <div className="flex self-center ">

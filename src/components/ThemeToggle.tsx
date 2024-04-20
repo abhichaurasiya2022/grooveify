@@ -71,9 +71,10 @@ function MoonIcon({ ...props }) {
         </svg>
     )
 }
+interface ThemeToggleProps extends React.HTMLAttributes<HTMLDivElement> { }
 
 
-export function ThemeToggle({ panelClassName = 'mt-4' }) {
+export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className }) => {
     // let [setting, setSetting] = useTheme()
     const [setting, setSetting] = useState<string>()
 
@@ -129,7 +130,7 @@ export function ThemeToggle({ panelClassName = 'mt-4' }) {
 
 
     return (
-        <div className='flex self-center text-light-primary dark:text-dark-primary'>
+        <div className={` ${className} flex self-center text-light-primary dark:text-dark-primary`}>
             {
                 setting === 'dark' ?
                     (

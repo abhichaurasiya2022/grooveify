@@ -17,10 +17,11 @@ const TrackSlider: React.FC<TrackSliderProps> = ({ className, value, onChange })
                 type="range"
                 min={0}
                 max={100}
+
                 value={value}
                 onChange={handleChange}
                 style={{ minWidth: '75%', height: '7px' }}
-                className={`${className} rounded-lg appearance-auto text-light-accent dark:text-dark-accent bg-light-accent dark:bg-dark-accent`}
+                className={`${className}  rounded-lg appearance-auto text-light-accent dark:text-dark-accent bg-light-accent dark:bg-dark-accent`}
             />
         </>
     );

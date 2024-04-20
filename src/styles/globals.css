@@ -10,13 +10,32 @@
   }
 
 
+
 }
 
 * {
   scrollbar-width: none;
   -ms-overflow-style: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 *::-webkit-scrollbar {
   display: none;
+}
+
+input[type='range'] {
+  accent-color: theme('colors.dark.accent');
+}
+
+.icon-transition {
+  transition: fill 0.3s ease-in-out;
+  /* Adjust the transition properties as needed */
+}
+
+.icon-transition {
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon-rotate {
+  transform: rotate(90deg);
 }

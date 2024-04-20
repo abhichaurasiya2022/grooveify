@@ -14,12 +14,12 @@ const HorizontalCard: React.FC<HorizontalCardProps> = ({ imageUrl, name, count, 
             <div className="flex items-center space-x-4">
                 <img src={imageUrl} alt="Card Image" className="h-10 w-10 object-cover rounded-xs" />
                 <div>
-                    <p className="text-sm font-semibold">{name}</p>
-                    <p className="text-xs text-light-secondary dark:text-dark-secondary">{count}</p>
+                    <p className="text-xs  font-semibold">{name}</p>
+                    <p className="text-xs font-normal text-light-secondary dark:text-dark-secondary">{count}</p>
                 </div>
             </div>
-            <div>
-                <p className="text-xs text-light-secondary dark:text-dark-secondary">{duration}</p>
+            <div className='flex'>
+                <p className="text-xs text-nowrap text-light-secondary dark:text-dark-secondary">{duration}</p>
             </div>
         </div>
     );

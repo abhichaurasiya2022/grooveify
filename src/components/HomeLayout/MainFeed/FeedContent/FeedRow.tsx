@@ -20,7 +20,7 @@ const FeedRow: React.FC<FeedRowProps> = ({ title, data }) => {
 
             <div className="flex p-2 overflow-x-scroll space-x-4">
                 {data.map((item, index) => (
-                    <Card key={index} imageUrl={item.imageUrl} title={item.title} subtitle={item.subtitle} />
+                    <Card className='' key={index} imageUrl={item.imageUrl} title={item.title} subtitle={item.subtitle} />
                 ))}
             </div>
         </div>

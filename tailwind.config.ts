@@ -24,6 +24,17 @@ const config: Config = {
 
         },
         dark: {
+          primary: colors.stone[50],
+          secondary: colors.stone[300],
+          accent: colors.blue[700],
+          bgMain: colors.stone[600],
+          bgNav: colors.stone[800],
+          bgActivity: colors.stone[900],
+          bgBody: colors.stone[900]
+
+
+        },
+        old: {
           primary: colors.slate[50],
           secondary: colors.slate[300],
           accent: colors.blue[700],

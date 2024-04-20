@@ -3,6 +3,7 @@ import Pagination from './Pagination';
 import SearchBar from './SearchBar';
 import { IconDots, IconLayoutSidebarRightCollapse } from '@tabler/icons-react';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 interface ActionHeaderProps {
     onButtonClick: () => void;
@@ -28,6 +29,7 @@ let settings = [
 ]
 const ActionHeader: React.FC<ActionHeaderProps> = ({ onRightIconClick, onLeftIconClick, onButtonClick }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const isMediumScreen = useMediaQuery("(max-width: 900px)");
 
     const [setting, setSetting] = useState<string>();
     return (
@@ -48,7 +50,12 @@ const ActionHeader: React.FC<ActionHeaderProps> = ({ onRightIconClick, onLeftIco
                 )}
 
             </div>
-            <ThemeToggle />
+            {
+                isMediumScreen == false && (
+
+                    <ThemeToggle />
+                )
+            }
         </div >
     );
 }

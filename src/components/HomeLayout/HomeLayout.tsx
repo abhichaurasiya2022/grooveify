@@ -4,11 +4,11 @@ import MainFeed from "./MainFeed/MainFeed"
 import Navbar from "./NavBar/NavBar"
 import Player from "./Player/Player"
 import Drawer from "../Drawer/Drawer"
-import useMediaQuery from "@/hooks/useMediaQuery"
 import MobileNavbar from "./NavBar/MobileNavBar"
 
 
 import { motion } from "framer-motion"
+import { useMediaQueryContext } from "@/utils/MediaQueryProvider"
 
 
 
@@ -18,7 +18,7 @@ const HomeLayout = () => {
     const [isSideBarDrawerOpen, setIsSideBarDrawerOpen] = useState(false);
     const [isActivityBarDrawerOpen, setIsActivityBarDrawerOpen] = useState(false);
     const [isOpen, setIsOpen] = useState(true);
-    const isMediumScreen = useMediaQuery("(max-width: 900px)");
+    const { isMediumScreen } = useMediaQueryContext();
 
     const Nav = <Navbar isSideBarDrawerOpen={isSideBarDrawerOpen} setIsSideBarDrawerOpen={setIsSideBarDrawerOpen} setIsSideBarOpen={setIsSideBarOpen} isSideBarOpen={isSideBarOpen} className={`${isSideBarOpen ? 'basis-1/6' : ''} pb-20 bg-light-bgNav dark:bg-dark-bgNav `} />
 

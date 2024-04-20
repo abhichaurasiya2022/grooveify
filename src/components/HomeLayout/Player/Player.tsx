@@ -4,14 +4,13 @@ import { IconHeart, IconSquareRoundedPlus } from '@tabler/icons-react';
 import TrackManager from './TrackManager';
 import MediaController from './MediaController';
 import colors from 'tailwindcss/colors';
-import useTailwindScreenSize from '@/hooks/useMediaQuery';
-import useMediaQuery from '@/hooks/useMediaQuery';
+import { useMediaQueryContext } from '@/utils/MediaQueryProvider';
 
 interface PlayerProps extends React.HTMLAttributes<HTMLDivElement> { }
 
 const Player: React.FC<PlayerProps> = ({ className, ...props }) => {
-    const isSmallScreen = useMediaQuery("(max-width: 800px)");
-    const isMobileScreen = useMediaQuery("(max-width: 500px)");
+    const { isSmallScreen } = useMediaQueryContext();
+    const { isMobileScreen } = useMediaQueryContext();
 
     const [sliderValue, setSliderValue] = useState<number>(50);
     const handleSliderChange = (newValue: number) => {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import TrackSlider from './TrackSlider';
 import { IconArrowsShuffle2, IconMusicPause, IconPlayerPause, IconPlayerPauseFilled, IconPlayerPlay, IconPlayerSkipBack, IconPlayerSkipForward, IconRepeat } from '@tabler/icons-react';
 import { stagger, useAnimate } from 'framer-motion';
-import useMediaQuery from '@/hooks/useMediaQuery';
+import { useMediaQueryContext } from '@/utils/MediaQueryProvider';
 
 interface TrackManagerProps extends React.HTMLAttributes<HTMLDivElement> { }
 function useMenuAnimation(isOpen: boolean) {
@@ -81,7 +81,7 @@ const TrackManager: React.FC<TrackManagerProps> = ({ className }) => {
     const handleSliderChange = (newValue: number) => {
         setSliderValue(newValue);
     };
-    const isMobileScreen = useMediaQuery("(max-width: 500px)");
+    const { isMobileScreen } = useMediaQueryContext();
 
     return (
         <div className={`${className} flex justify-center content-start flex-col items-center space-y-2`}>

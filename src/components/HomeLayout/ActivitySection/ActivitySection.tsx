@@ -3,6 +3,7 @@ import User from './User';
 import HorizontalCard from '@/components/Card/HorizontalCard';
 import { IconBell, IconChevronDown } from '@tabler/icons-react';
 import { FullWidthButton } from '@/components/Buttons/Buttons';
+import { motion } from 'framer-motion';
 
 interface CardData {
     imageUrl: string;
@@ -60,8 +61,8 @@ const ActivitySection: React.FC<ActivitySectionProps> = ({ className, ...props }
     ]
 
     function getRandomDuration() {
-        const hours = Math.floor(Math.random() * 3) + 1; // Random number between 1 and 3
-        const minutes = Math.floor(Math.random() * 60); // Random number between 0 and 59
+        const hours = Math.floor(Math.random() * 3) + 1;
+        const minutes = Math.floor(Math.random() * 60);
         return `${hours} hr ${minutes} min`;
     }
     return (
@@ -89,11 +90,19 @@ const Activity: React.FC<{ title: string; cards: CardData[] }> = ({ title, cards
             </div>
             <div className="flex flex-col">
                 {cards.map((card, index) => (
-                    <HorizontalCard key={index} imageUrl={card.imageUrl} name={card.name} count={card.album} duration={card.duration} />
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3, delay: index * 0.1 }}
+                    >
+                        <HorizontalCard imageUrl={card.imageUrl} name={card.name} count={card.album} duration={card.duration} />
+                    </motion.div>
                 ))}
             </div>
         </div>
     );
 }
+
 
 export default ActivitySection;

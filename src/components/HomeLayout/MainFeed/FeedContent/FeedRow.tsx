@@ -1,4 +1,5 @@
 import Card from '@/components/Card/Card';
+import { motion } from 'framer-motion';
 import React from 'react';
 
 interface FeedRowProps {
@@ -20,7 +21,20 @@ const FeedRow: React.FC<FeedRowProps> = ({ title, data }) => {
 
             <div className="flex p-2 overflow-x-scroll space-x-4">
                 {data.map((item, index) => (
-                    <Card className='' key={index} imageUrl={item.imageUrl} title={item.title} subtitle={item.subtitle} />
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20, y: -10 }}
+                        animate={{ opacity: 1, x: 0, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        className="w-44 flex-shrink-0"
+                    >
+                        <Card
+                            key={index}
+                            imageUrl={item.imageUrl}
+                            title={item.title}
+                            subtitle={item.subtitle}
+                        />
+                    </motion.div>
                 ))}
             </div>
         </div>

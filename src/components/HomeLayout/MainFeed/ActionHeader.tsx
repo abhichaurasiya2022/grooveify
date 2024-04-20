@@ -3,7 +3,7 @@ import Pagination from './Pagination';
 import SearchBar from './SearchBar';
 import { IconDots, IconLayoutSidebarRightCollapse } from '@tabler/icons-react';
 import { ThemeToggle } from '@/components/ThemeToggle';
-import useMediaQuery from '@/hooks/useMediaQuery';
+import { useMediaQueryContext } from '@/utils/MediaQueryProvider';
 
 interface ActionHeaderProps {
     onButtonClick: () => void;
@@ -29,9 +29,8 @@ let settings = [
 ]
 const ActionHeader: React.FC<ActionHeaderProps> = ({ onRightIconClick, onLeftIconClick, onButtonClick }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const isMediumScreen = useMediaQuery("(max-width: 900px)");
+    const { isMediumScreen } = useMediaQueryContext();
 
-    const [setting, setSetting] = useState<string>();
     return (
         <div className=" flex py-3  w-full">
             <Pagination className='p-3 text-light-primary dark:text-dark-primary' onPrevClick={onLeftIconClick} onNextClick={onRightIconClick} />

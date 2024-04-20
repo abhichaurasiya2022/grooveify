@@ -4,7 +4,6 @@ import { IconLayoutSidebarRightExpand, IconVinyl } from '@tabler/icons-react';
 import ActionHeader from './ActionHeader';
 import Features from './Features';
 import Library from './Library';
-import useMediaQuery from '@/hooks/useMediaQuery';
 import { ThemeToggle } from '@/components/ThemeToggle';
 
 interface NavbarProps extends React.HTMLProps<HTMLDivElement> {

@@ -31,8 +31,8 @@ const Navbar: React.FC<NavbarProps> = ({ className, setIsSideBarOpen, isSideBarO
 
             <Features className='px-3' isSideBarDrawerOpen={isSideBarDrawerOpen} setIsSideBarDrawerOpen={setIsSideBarDrawerOpen} isSideBarOpen={isSideBarOpen} />
             <Library className='px-3' isSideBarDrawerOpen={isSideBarDrawerOpen} setIsSideBarDrawerOpen={setIsSideBarDrawerOpen} isSideBarOpen={isSideBarOpen} />
-            <div className={`w-full flex self-end justify-start items-center`}>
-                <img src={'./human.jpg'} alt="Card Image" className=" object-cover rounded-xs" />
+            <div className={` ${!isSideBarOpen ? 'hidden' : ''} w-full flex self-end  justify-start items-center`}>
+                <img src={'./human.jpg'} alt="Card Image" className=" object-cover w-full rounded-xs" />
             </div>
 
         </nav>);

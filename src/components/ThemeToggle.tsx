@@ -75,7 +75,6 @@ interface ThemeToggleProps extends React.HTMLAttributes<HTMLDivElement> { }
 
 
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className }) => {
-    // let [setting, setSetting] = useTheme()
     const [setting, setSetting] = useState<string>()
 
     useIsomorphicLayoutEffect(() => {

@@ -4,9 +4,9 @@ interface DrawerProps {
     isOpen: boolean;
     setIsOpen: (isOpen: boolean) => void;
     children: ReactNode;
-    side: "right" | "left" | "top" | "bottom"; // Define the 'side' prop
-    width?: string; // Optional width prop
-    height?: string; // Optional height prop
+    side: "right" | "left" | "top" | "bottom";
+    width?: string;
+    height?: string;
 }
 
 export default function Drawer({ children, isOpen, setIsOpen, side, width, height }: DrawerProps) {
@@ -63,9 +63,9 @@ export default function Drawer({ children, isOpen, setIsOpen, side, width, heigh
                     "m-0 w-screen max-w-lg absolute bg-white shadow-xl delay-400 duration-500 ease-in-out transition-all " +
                     (side === "right" || side === "left" ? "h-full" : "h-screen") +
                     " " +
-                    (width ? `w-${width}` : "") + // Set width if provided
+                    (width ? `w-${width}` : "") +
                     " " +
-                    (height ? `h-${height}` : "") + // Set height if provided
+                    (height ? `h-${height}` : "") +
                     " " +
                     (side === "right"
                         ? "right-0 " + getTransformClass()

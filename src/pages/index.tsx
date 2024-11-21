@@ -13,7 +13,6 @@ export default function Home() {
 
   return (
     <main className="flex justify-center items-center ">
-hello
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: areQueriesResolved ? 1 : 0 }}

@@ -27,6 +27,9 @@ export default function Document() {
 
           gtag('config', 'G-BCRS3WHWWZ');`}
         </script>
+
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="06368c4e-aa23-441a-b490-c860e539ee3d" type="text/javascript" async>
+        </script>
       </Head>
       <body className="w-dvw h-dvh max-h-dvh scroll-smooth bg-light-bgBody dark:bg-dark-bgBody">
         <Main />

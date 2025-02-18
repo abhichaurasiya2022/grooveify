@@ -25,13 +25,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               `,
           }}
         />
-       <script async src="https://www.googletagmanager.com/gtag/js?id=G-BCRS3WHWWZ"></script>
+       <script async src="https://www.googletagmanager.com/gtag/js?id=G-FGCQVPF1CV"></script>
 <script>
   {`window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-BCRS3WHWWZ');`}
+  gtag('config', 'G-FGCQVPF1CV');`}
 </script>
         <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="06368c4e-aa23-441a-b490-c860e539ee3d" type="text/javascript" async>
         </script>
